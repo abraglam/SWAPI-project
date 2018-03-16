@@ -18,13 +18,11 @@ viewChanger = () => {
   switch (this.state.dropdown) {
           case 'Characters':
             return <Characters />
-            break;
         
           default:
-          return <div>
+          return (<div>
             <h1>Please make a selection</h1>
-            </div> 
-            break;
+            </div> )
         }}
 
   render() {

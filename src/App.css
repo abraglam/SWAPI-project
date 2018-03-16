@@ -11,6 +11,7 @@
 h1 {
   font-family: "STARWARS", sans-serif;
   font-size: 3em;
+  letter-spacing: 0.02em;
 }
 
 select, select:focus {
