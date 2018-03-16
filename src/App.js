@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
-import Chooser from './Chooser'
+import Characters from './Characters';
+import Chooser from './Chooser';
 import Scroll from './Scroll';
 
 class App extends Component {
   constructor(){
     super();
-    this.state = {dropdown: ''}
+    this.state = {dropdown: 'default'}
   }
   
   onDropdownChange = (event) => {
     this.setState({ dropdown: event.target.value })
-    console.log(this.state);
     
   }
+viewChanger = () => {
+  switch (this.state.dropdown) {
+          case 'Characters':
+            return <Characters />
+            break;
+        
+          default:
+          return <div>
+            <h1>Please make a selection</h1>
+            </div> 
+            break;
+        }}
 
   render() {
     return (
@@ -21,7 +33,7 @@ class App extends Component {
       <h1> StarWars API Viewer </h1>
       <Chooser dropChange={this.onDropdownChange} />
       <Scroll>
-
+        {this.viewChanger()}
       </Scroll>
       </div>
     );
