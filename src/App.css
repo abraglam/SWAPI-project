@@ -7,6 +7,9 @@
 .App {
   text-align: center;
 }
+body {
+  font-family: "roboto", sans-serif;
+}
 
 h1 {
   font-family: "STARWARS", sans-serif;

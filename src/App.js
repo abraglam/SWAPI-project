@@ -20,7 +20,7 @@ viewChanger = () => {
             return <Characters />
         
           default:
-          return (<div>
+          return (<div className='pa2'>
             <h1>Please make a selection</h1>
             </div> )
         }}
